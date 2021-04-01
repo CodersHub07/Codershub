@@ -1388,3 +1388,35 @@ h1, h2, h3, h4, h5,
   transition: .9s;
   background-color: #C06D0A;
 }
+
+.try::before , .try::after{
+  content: '';
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  transition: 2s;
+}
+
+.try::before{
+  top: 0;
+  left: 0;
+}
+
+.try::after{
+  bottom: 0;
+  right: 0;
+}
+
+.try:hover::after{
+  border-right: 2px solid #C06D0A;
+  border-bottom: 2px solid #C06D0A;
+  width: 100px;
+  height: 100px;
+}
+
+.try:hover::before{
+  border-top: 2px solid #C06D0A;
+  border-left: 2px solid #C06D0A;
+  width: 100px;
+  height: 100px;
+}
